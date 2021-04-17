@@ -12,7 +12,10 @@ const { v4: uuidv4 } = require('uuid');
 //export the router file
 const router = require('./router')
 
+const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
+
+
 
 //use the BP
 app.use(bodyparser.json());
@@ -37,4 +40,4 @@ app.get('/', function (req, res) {
     res.render('index', { title: 'Login System', logout: router.logout });
 })
 
-app.listen('3000');
+app.listen(port);
