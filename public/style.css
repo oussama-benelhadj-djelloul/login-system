@@ -1,0 +1,10 @@
+h1{
+    color: blueviolet;
+}
+body{
+    background-image: url('assests/bg.jpg');
+    background-size: cover;
+}
+.centerdiv{
+    padding: 50px;
+}

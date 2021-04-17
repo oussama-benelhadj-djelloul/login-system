@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body>
+    <h1 class="text-center p-3">Login System</h1>
+    <hr>
+    <div class="container centerdiv">
+        <form method="POST" action="route/login" class="w-50 mx-auto mt-5">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" required id="exampleInputPassword1"
+                    placeholder="Password">
+            </div>
+            <%if(logout){%>
+            <div class="p-3 mb-2 bg-danger text-white">
+                <%= logout %>
+                <a href="/"> Go to log it</a>
+            </div>
+            <% } else{ %>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <%}%>
+
+        </form>
+    </div>
+</body>
+
+</html>
